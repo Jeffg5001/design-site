@@ -1,5 +1,244 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FD9119;
+	line-height: 12px;
+	list-style-type: none;
+	word-spacing: 0.05em;
+	margin-left: 0px;
+	padding-left: 0px;
+	left: .02px;
+	text-align: left;
+	text-indent: 0px;
+	white-space: normal;
+	vertical-align: middle;
+}
+.list {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 130px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: lowercase;
+	color: #FD9119;
+	top: 30px;
+	clip: rect(30px,auto,auto,auto);
+}
+.list {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 30px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: lowercase;
+	color: #FD9119;
+	letter-spacing: normal;
+	text-align: left;
+	vertical-align: middle;
+	word-spacing: normal;
+	white-space: normal;
+	display: none;
+}
+.list {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 24px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: lowercase;
+	color: #FD9119;
+	letter-spacing: normal;
+	text-align: left;
+	vertical-align: middle;
+	word-spacing: normal;
+	white-space: normal;
+	display: none;
+	overflow: auto;
+	position: absolute;
+	visibility: visible;
+	z-index: auto;
+	height: auto;
+	width: auto;
+}
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FD9119;
+	text-decoration: none;
+}
+.style5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #0066CC;
+	font-style: normal;
+	line-height: 16pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	background-position: center center;
+	letter-spacing: normal;
+	text-align: justify;
+	vertical-align: middle;
+	word-spacing: normal;
+	white-space: normal;
+	display: none;
+}
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 16pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	background-position: center center;
+}
+.style7 {color: #006699}
+.style8 {color: #FB7E16}
+.style11 {color: #FB7E16; font-weight: bold; }
+#apDiv1 {
+	position:absolute;
+	left:11px;
+	top:26px;
+	width:700px;
+	height:32px;
+	z-index:1;
+}
+#phone2 {
+	position:relative;
+	left:660px;
+	top:70px;
+	width:122px;
+	height:23px;
+	z-index:1;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FE9123;
+	text-align: right;
+	font-size: 18px;
+}
+.advertising {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: lighter;
+	color: #AFC6D3;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	text-decoration: none;
+}
+
+.style3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FEF6B0;
+	text-decoration: none;
+}
+.style5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FD9119;
+	text-decoration: none;
+}
+.bkgd {
+	background-color: #FFF;
+}
+/* body {
+	background-color: #226287;
+} */
+#phone {
+	left:16px;
+	top:89px;
+	width:122px;
+	height:16px;
+	z-index:1;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FE9123;
+	text-align: right;
+	font-size: 18px;
+	position: absolute;
+	visibility: visible;
+}
+.facTwit {
+	padding: 0px;
+	width: 60px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+#visitLBlink a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: normal;
+	color: #FE9123;
+	text-decoration: none;
+	text-align: center;
+	background-position: center;
+	margin: 0px;
+	padding: 0px;
+}
+.advertising {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: lighter;
+	color: #AFC6D3;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	background-position: center bottom;
+	text-decoration: none;
+	text-align: center;
+}
+.titlebanner {
+	background-color: #FD9119;
+	margin: 0px;
+	padding: 0px;
+	background-position: center;
+	text-align: center;
+}
+.flash {
+	margin: 0px;
+	padding: 0px;
+	background-position: center;
+	text-align: center;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.advertisingOrange {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: lighter;
+	color: #FE9123;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 24px;
+	margin-left: 0px;
+	background-position: center;
+	text-decoration: none;
+	text-align: center;
+	background-color: #256286;
+}
+.welcome-header {
+  height: auto;
+  width: 100vw;
 }
