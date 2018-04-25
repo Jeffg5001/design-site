@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Home} from './Home'
 import {Route, NavLink, Link} from 'react-router-dom';
 import { Slideshow } from './slideshow';
+import { Portfolio } from './Portfolio';
 
 
 class App extends Component {
@@ -13,17 +14,17 @@ class App extends Component {
         <div className="grid-wrapper">
           <div className="links">
               <Link to='/'>Home</Link>
-              <Link to='/'>Portfolio</Link>
+              <Portfolio />
               <Link to='/'>Contact</Link>          
           </div>
           <div className="logo">
-              <img id='flowerlogo' src="images/flower.png" />
-              <img id='printlogo' src="images/d•slott•design.png" />
+              <Link to='/' className='logo'><img id='flowerlogo' src="images/flower.png" /></Link>
+              <Link to='/' ><img id='printlogo' src="images/d•slott•design.png" /></Link>
           </div>
         </div>
       </div>
       <Route exact path='/' component={Home}/>
-      <Route path='/ads' component={Slideshow}/>      
+      <Route path='/:category' component={Slideshow}/>      
       
       <div className="bottomBar" >
         <div className="NavLinks">
@@ -48,7 +49,7 @@ class App extends Component {
                   },
                   {
                     name: 'book jackets',
-                    path: '/bookJackets'
+                    path: '/book_jackets'
                   },
                 ].map( linkInfo => (<div key={linkInfo.name}>| <NavLink to={linkInfo.path}> {linkInfo.name} </NavLink> </div> ))
               }
