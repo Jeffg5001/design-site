@@ -3,6 +3,7 @@ import {Home} from './Home'
 import {Route, NavLink, Link} from 'react-router-dom';
 import { Slideshow } from './slideshow';
 import { Portfolio } from './Portfolio';
+import  Contact from './ContactForm';
 
 
 class App extends Component {
@@ -15,11 +16,11 @@ class App extends Component {
           <div className="links">
               <Link to='/'>Home</Link>
               <Portfolio />
-              <Link to='/'>Contact</Link>          
+              <Contact />          
           </div>
           <div className="logo">
-              <Link to='/' className='logo'><img id='flowerlogo' src="images/flower.png" /></Link>
-              <Link to='/' ><img id='printlogo' src="images/d•slott•design.png" /></Link>
+              <Link to='/' className='logo'><img alt='flower logo' id='flowerlogo' src="images/flower.png" /></Link>
+              <Link to='/' ><img id='printlogo' alt='d•slott•design logo' src="images/d•slott•design.png" /></Link>
           </div>
         </div>
       </div>

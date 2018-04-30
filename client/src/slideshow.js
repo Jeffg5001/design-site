@@ -20,11 +20,11 @@ export const Slideshow = props =>{
         //<div ><img src={`/images/ads_Flyers/${images[0]}`} style={ {display: 'block'} } /></div>
         <div >
         <div className='container'>
-            <h2 id='slide-title'><span className='bracket'>{`< `}</span>{folder === 'flyers' ? 'ads' : folder === 'book_jackets' ? 'book' : folder}<span className='bracket'>{` >`}</span></h2>
+            <h2 id='slide-title'><span className='bracket'>{`< `}</span>{folder === 'flyers' ? 'ads' : folder === 'book_jackets' ? 'books' : folder}<span className='bracket'>{` >`}</span></h2>
             <Slider {...settings}>
                {images.map(image =>(
             <div key={image}>
-                <img src={`images/${folder}/${image}`} />
+                <img alt={`${image}`} src={`images/${folder}/${image}`} />
             </div>) )}
            </Slider>
         </div>

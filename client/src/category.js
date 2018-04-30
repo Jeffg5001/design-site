@@ -9,11 +9,11 @@ export default class SingleCategory extends Component{
 
     render(){
         let name = this.props.name;
-        if(this.props.name === 'book') name = 'book_jackets';
+        if(this.props.name === 'books') name = 'book_jackets';
         return (
             <div className='category'>
                 <Link to={`/${name}`}>
-                <img className='thumbnail' src={this.props.image} />
+                <img className='thumbnail' alt={this.props.name} src={this.props.image} />
                 <h2>{this.props.name}</h2>
                 </Link>
             </div>

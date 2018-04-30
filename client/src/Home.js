@@ -6,11 +6,13 @@ export const Home = (props) =>{
     
     return (
             <div>
+                <div className = 'homeWrapper'>
                 <div className='home'>
                     {categories.map( ( category ) => {
                     return <SingleCategory key={category.fileName} image={`images/categories/${category.fileName}`} name={category.fileName.split('.')[0]}  />
                 })
                 }
+                </div>
                 </div>
                 <div className='textContainer'>
                     <h2 className='homeHeader' >advertising print & digital design solutions</h2>
