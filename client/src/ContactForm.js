@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import "react-responsive-modal/lib/react-responsive-modal.css";
 import Modal from "react-responsive-modal/lib/css";
 
@@ -18,7 +19,12 @@ export default class ContactForm extends React.Component {
   closeModal() {
     this.setState({ open: false });
   }
+  handleSubmit(e) {
+    e.preventDefault()
+    console.log(e)
+    //axios.post('https://formspree.io/debbie@dslottdesign.com')
 
+  }
   render() {
       const { open } = this.state;
     //   <h4>What type of services are you interested in?
@@ -79,11 +85,12 @@ export default class ContactForm extends React.Component {
     //   />
     //   <strong>HTML Email</strong>
     //   <br />
+    // <form className="form" action='https://formspree.io/debbie@dslottdesign.com' method='POST' >
     return (
       <div>
         <a onClick={this.openModal}>Contact</a>
         <Modal open={open} onClose={this.closeModal}>
-        <form className="form">
+        <form className="form" action='https://formspree.io/debbie@dslottdesign.com' method='POST' >
             <h2>Contact</h2>
             <p type='Name' />
             <input type="text" name="name" placeholder="Your name" required />
@@ -95,13 +102,17 @@ export default class ContactForm extends React.Component {
             <input type="tel" name="phone" />
             <br />
             <p type='Web Address' />
-            <input type="ur" name="city" />
+            <input type="url" name="web-address" />
+            <br />
+            <p type='Email' />
+            <input type="email" name="_replyto" />
             <br />
             <p type="Describe your business and what you're looking for." />
             <textarea 
             name="business-description"
             />
             <br />            
+            <input style={{display: 'none'}} type='text' name='_gotcha'/>
             <button type='submit' >submit</button>
             <div>
             <span className='fa fa-phone' /> 516.524.2592

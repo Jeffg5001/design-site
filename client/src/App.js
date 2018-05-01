@@ -20,7 +20,7 @@ class App extends Component {
           </div>
           <div className="logo">
               <Link to='/' className='logo'><img alt='flower logo' id='flowerlogo' src="images/flower.png" /></Link>
-              <Link to='/' ><img id='printlogo' alt='d•slott•design logo' src="images/d•slott•design.png" /></Link>
+              <Link to='/' ><img id='printlogo' alt='d•slott•design-logo' src="images/dslottdesign.png" /></Link>
           </div>
         </div>
       </div>
