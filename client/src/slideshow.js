@@ -15,7 +15,6 @@ export const Slideshow = props =>{
     slidesArr[0] = 'ads';
     const prevCat = categoryIndex - 1 < 0 ? slidesArr.length - 1 : categoryIndex - 1;
     const nextCat = (categoryIndex + 1)%slidesArr.length;
-    console.log('next:',nextCat);
     
     let settings = {
         dots: true,
@@ -30,7 +29,13 @@ export const Slideshow = props =>{
         //<div ><img src={`/images/ads_Flyers/${images[0]}`} style={ {display: 'block'} } /></div>
         <div >
         <div className='container'>
-            <h2 id='slide-title'><Link to={`/${slidesArr[prevCat]}`}><span className='bracket'>{`< `}</span></Link>{folder === 'flyers' ? 'ads' : folder}<Link to={`/${slidesArr[nextCat]}`}><span className='bracket'>{` >`}</span></Link></h2>
+            <div id="slide-title-container">
+            <h2 id='slide-title'>
+                <Link to={`/${slidesArr[prevCat]}`}><span className='bracket'>{`< `}</span></Link>
+                {folder === 'flyers' ? 'ads' : folder}
+                <Link to={`/${slidesArr[nextCat]}`}><span className='bracket'>{` >`}</span></Link>
+            </h2>
+            </div>
             <Slider {...settings}>
                {images.map(image =>(
             <div key={image}>

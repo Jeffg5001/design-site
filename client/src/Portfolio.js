@@ -13,7 +13,6 @@ export class Portfolio extends Component{
 
     handleMenuMouseOver(e){
         e.preventDefault();
-        console.log('fired')
         this.setState({isShowing: true}, ()=>{
             document.addEventListener('click', this.closeMenu);
             document.addEventListener('touchend', this.closeMenu);
