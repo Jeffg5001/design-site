@@ -5,8 +5,13 @@ body {
   /* background-color: yellowgreen; */
   background-image: url("whiteCircleBkgd.png");
   background-size: auto;
-  height: 100vh;
+  /* height: 100vh; */
 }
+
+.sidebar{
+  display: none;
+}
+
 .bottomBar {
   /* position: absolute;	 */
   top: calc(100vh - 58px);
@@ -16,22 +21,26 @@ body {
   color: rgb(35, 97, 135);
   display: flex;
   justify-content: space-between;
+  z-index: 3;
 }
 .bottomBar div {
   display: inline;
 }
-.NavLinks {
+.NavLinks{
   padding: 20px 20px 20px 40px;
   align-self: center;
   flex: 0 0.5 fit-content;
+}
+.bottomBar .MobileLinks{
+  display:none;
 }
 .bottomBar span {
   color: white;
   font-size: 1.7em;
   align-self: center;
   padding: 0 40px 0 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  flex: 0 0.5 fit-content;
+  font-family: Arial, sans-serif;
+  /* flex: 0 0.5 fit-content; */
 }
 a {
   text-decoration: none;
@@ -45,7 +54,9 @@ a {
   height: 4vh;
   display: block;
 }
-
+.topBar i{
+  display: none;
+}
 .main {
   margin: 0vh 0vw 5vh 0vw;
 }
@@ -53,7 +64,8 @@ a {
 .logo {
   background-color: rgb(35, 97, 135);
   width: 100vw;
-  height: 9vh;
+  /* height: 9vh; */
+  padding: 8px 0;  
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -82,9 +94,11 @@ a {
   width: 500px;
   padding-right: 65px;
   height: auto;
-  flex: 0 1 fit-content;
-  z-index: 1;
+  /* flex: 0 1 fit-content; */
+  /* z-index: 1; */
 }
+
+
 
 .home {
   width: 100vw;
@@ -103,12 +117,13 @@ a {
   max-width: 800px;
   margin: auto;
   margin-top: 11vh;
-  margin-bottom: calc(11vh + 58px);
+  margin-bottom: calc(11vh + 190px);
   width: 65vw;
   /* left: 27.5vw; */
 }
 .homeHeader {
   color: #fe9311;
+  text-align: center;
 }
 .homeWrapper {
   width: 100vw;
@@ -123,8 +138,13 @@ a {
   position: relative;
   margin: 0px 2px 0px 2px;
   margin-bottom: 0px;
+  transition: all 0.1s ease-in-out;
 }
-
+.category:hover{
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0px 9px 12px 0px #333;  
+}
 .category h2 {
   position: absolute;
   color: white;
@@ -218,7 +238,7 @@ h3 {
 }
 .container {
   position: relative;
-  margin: 5vh auto 6vh;
+  margin: 5vmax auto 6vmax;
   padding: 40px;
   width: calc(100% - 80px);
   color: #333;
@@ -230,7 +250,8 @@ div {
 
 #slogan {
   position: relative;
-  margin-bottom: 328px;
+  /* margin-bottom: 328px; */
+  text-align: center;
 }
 #slide-title {
   position: absolute;
@@ -238,8 +259,8 @@ div {
   color: #fff;
   text-shadow: 2px 2px 4px black;
   z-index: 2;
-  font-size: 40px;
-  top: calc(50% - 80px);
+  font-size: 27px;
+  top: calc(56% - 80px);
   /* float: left; */
 }
 .bracket {
@@ -250,7 +271,7 @@ div {
   position: absolute;
   /* display: none;
 	transition-property: display;
-	transition: ease .2s */
+  transition: ease .2s */
   opacity: 0;
   transition: all linear 0.2s;
 }
@@ -268,6 +289,7 @@ div {
   box-shadow: 4px 3px 7px 1px #333;
   transform: scale(1);
   transition: all linear 0.2s;
+  z-index: 3;  
 }
 
 .visible {
@@ -281,7 +303,7 @@ div {
 }
 
 .categories-menu button:hover {
-  background-color: rgb(35, 97, 135);
+  background-color: rgb(254, 147, 17);
   transform: translate3d(0, -2px, 0);
 }
 
@@ -299,14 +321,13 @@ div {
   margin: 0;
 } */
 .form {
-  width: 340px;
-  height: 802px;
+  width: 70vw;
   background: #e6e6e6;
   border-radius: 8px;
   box-shadow: 0 0 40px -10px #000;
   margin: 31px;
   padding: 20px 30px;
-  max-width: calc(100vw - 40px);
+  max-width: 600px;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   position: relative;
@@ -314,7 +335,6 @@ div {
 .form h2 {
   margin: 10px 0;
   padding-bottom: 10px;
-  width: 180px;
   color: #78788c;
   border-bottom: 3px solid #78788c;
 }
@@ -343,9 +363,10 @@ p:before {
   color: #5a5a5a;
 }
 .form button {
-  float: right;
+  /* float: right; */
+
   padding: 8px 12px;
-  margin: 8px 0 0;
+  margin: 8px 0 16px;
   font-family: "Montserrat", sans-serif;
   border: 2px solid #78788c;
   background: 0;
@@ -360,21 +381,22 @@ p:before {
 .form div {
   content: "Hi";
   position: absolute;
-  bottom: -26px;
-  right: -38px;
-  background: #50505a;
+  bottom: -4vh;
+  right: -5vw;
+  background: rgb(35, 97, 135);
   color: #fff;
-  width: 320px;
-  padding: 16px 4px 16px 0;
+  /* width: 17.5rem; */
+  padding: 16px 16px 16px 0;
   border-radius: 6px;
   font-size: 13px;
   box-shadow: 10px 10px 40px -14px #000;
+  min-width: 275.703px;
 }
 .form span {
   margin: 0 5px 0 15px;
 }
 div .react-responsive-modal-modal{
- align-self: center;
+ /* align-self: center; */
  background: yellowgreen;
  border-radius: 8px;
 }
@@ -382,3 +404,155 @@ div .react-responsive-modal-modal{
 .form a {
   color: white;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 812px) {
+  /* Styles */
+  .sidebar{
+    display: initial;
+  }
+
+
+  .logo #printlogo{
+    /* display: absolute; */
+    position: relative;
+    width: 90vw;
+    height: auto;
+    padding: 0px;
+    z-index: 2;
+    align-self: center;
+    max-width: 300px;
+    /* left:-5vw; */
+    /* margin: auto; */
+  }
+  .logo a{
+    position: absolute;
+  }
+  #flowerlogo{
+    /* display: absolute; */
+    left: initial;
+    position: absolute;
+    width: 60vw;
+    max-width: 216px;
+    /* left:25vw; */
+    z-index: 1;
+    transform: translate(5px,0px);
+    /* margin: auto; */
+  }
+
+  .logo{
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+  }
+  .bottomBar{
+    position: relative;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    top: 1vh;
+  }
+  .NavLinks {
+    width: 80vw;
+    height: auto;
+    left:10vw;
+    padding: 0;
+    margin: auto;
+  }
+  
+  .bottomBar .NavLinks{
+    display: none;
+  }
+  .bottomBar .MobileLinks{
+    display: block;
+    width: 100vw;
+    margin: auto;
+    text-align: center;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    font-size: 3vmin;
+    padding: 10px 0 0;
+  }
+  .MobileLinks ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    display: block;
+    line-height: 1.75em;
+    font-size: 1.2em;
+  }
+  .bottomBar span{
+    left: 0;
+    align-self: center;
+    /* flex-basis: 80%; */
+    /* width: 207.906px; */
+    /* margin: auto; */
+    padding: 0px 0px 5px;
+    font-size: 3.5vmax;
+  }
+  .links{
+    display: none;
+  }
+  .topBar{
+    height: 8vmax;
+    margin: 0 0 12px;
+    /* min-height: 51px; */
+  }
+  .topBar i{
+    display: initial;
+    /* padding: 2px; */
+    font-size: 4vmax;
+    color: rgb(35, 97, 135);
+    /* border: solid 2px rgb(35, 97, 135); */
+    border-radius: 4px;
+    position: relative;
+    top: 2vmax;
+    left: .75rem;
+  }
+
+  .sidebarcontent{
+    padding: 8px 20px;
+    /* margin: 8px; */
+
+  }
+  
+  ul{
+    list-style-type: none;  
+  }
+
+  hr{
+    border: 0;
+    height: 1px;
+    background: rgba(100, 100, 100, 0.2);
+    /* background-image: linear-gradient(to right, yellowgreen, rgba(0,0,0,0.75), yellowgreen); */
+  }
+
+  .container img {
+    width: calc(100vw - 80px);
+    height: auto;
+  }
+
+  ul.slick-dots{
+    bottom: -80px;
+    overflow: hidden;
+  }
+
+  #slide-title{
+    transform: rotate(0deg);
+    position: relative;
+    top:0;
+    font-size:8vw;
+    /* padding: 8px; */
+    text-align: center;
+    margin: auto;
+  }
+  #slogan{
+    margin-bottom: 11vh;
+    text-align: center;
+  }
+  .phoneNumber{
+   margin: 1vh 0;
+  }
+
+
+  }

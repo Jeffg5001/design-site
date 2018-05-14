@@ -7,10 +7,19 @@ export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
+      name: '',
+      "company-name": '',
+      phone: '',
+      "web-address": '',
+      _replyto: '',
+      'business-description': '',
+      _gotcha: '',
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   openModal() {
@@ -21,10 +30,22 @@ export default class ContactForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault()
-    console.log(e)
-    //axios.post('https://formspree.io/debbie@dslottdesign.com')
+    let data = {...this.state}
+    delete data.open
+    axios({
+      url:'https://formspree.io/debbie@dslottdesign.com',
+      // url:'/api/hello',
+      method: 'post',
+      data: data,
+      config:{headers: { 'Content-Type': "application/json"}},
+    }).then(this.closeModal).catch(console.error.bind(console))
 
   }
+
+  handleChange(e){
+    this.setState({[e.target.name]:e.target.value});
+  }
+
   render() {
       const { open } = this.state;
     //   <h4>What type of services are you interested in?
@@ -90,32 +111,33 @@ export default class ContactForm extends React.Component {
       <div>
         <a onClick={this.openModal}>Contact</a>
         <Modal open={open} onClose={this.closeModal}>
-        <form className="form" action='https://formspree.io/debbie@dslottdesign.com' method='POST' >
+        <form className="form" onSubmit={this.handleSubmit} >
             <h2>Contact</h2>
             <p type='Name' />
-            <input type="text" name="name" placeholder="Your name" required />
+            <input type="text" name="name" placeholder="Your name" required onChange={this.handleChange}/>
             <br />
-            <p type='Company' Name />
-            <input type="text" name="company-name" />
+            <p type='Company Name' />
+            <input onChange={this.handleChange} type="text" name="company-name" />
             <br />
             <p type='Phone' />
-            <input type="tel" name="phone" />
+            <input onChange={this.handleChange} type="tel" name="phone" />
             <br />
             <p type='Web Address' />
-            <input type="url" name="web-address" />
+            <input onChange={this.handleChange} type="url" name="web-address" />
             <br />
             <p type='Email' />
-            <input type="email" name="_replyto" />
+            <input onChange={this.handleChange} type="email" name="_replyto" />
             <br />
             <p type="Describe your business and what you're looking for." />
             <textarea 
+            onChange={this.handleChange}
             name="business-description"
             />
             <br />            
-            <input style={{display: 'none'}} type='text' name='_gotcha'/>
+            <input onChange={this.handleChange} style={{display: 'none'}} type='text' name='_gotcha'/>
             <button type='submit' >submit</button>
             <div>
-            <span className='fa fa-phone' /> 516.524.2592
+            <span className='fa fa-phone' /> (516) 524-2592
             <span className='fa fa-envelope-o' /> 
             <a href="mailto:dslottdesign@yahoo.com" >dslottdesign@yahoo.com</a>         
             </div>

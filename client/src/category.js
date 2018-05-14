@@ -9,7 +9,6 @@ export default class SingleCategory extends Component{
 
     render(){
         let name = this.props.name;
-        if(this.props.name === 'books') name = 'book_jackets';
         return (
             <div className='category'>
                 <Link to={`/${name}`}>

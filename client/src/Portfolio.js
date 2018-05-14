@@ -13,29 +13,32 @@ export class Portfolio extends Component{
 
     handleMenuMouseOver(e){
         e.preventDefault();
+        console.log('fired')
         this.setState({isShowing: true}, ()=>{
             document.addEventListener('click', this.closeMenu);
+            document.addEventListener('touchend', this.closeMenu);
         });
     }
 
     closeMenu(){
         this.setState({isShowing: false}, () => {
             document.removeEventListener('click', this.closeMenu);
+            document.removeEventListener('touchend', this.closeMenu);
         });
 
     }
 
     render(){
         return( <div id='portfolio-container'>
-        <a onMouseOver={this.handleMenuMouseOver}>
+        <a onTouchEnd={this.handleMenuMouseOver} onMouseOver={this.handleMenuMouseOver}>
             Portfolio
         </a>{
                 <div onMouseLeave={this.closeMenu} className={this.state.isShowing ? `categories-menu visible`: `categories-menu hidden`}>
                     <NavLink to='/ads'><button> ads </button></NavLink>
                     <NavLink to='/mailers'><button> mailers </button></NavLink>
-                    <NavLink to='/logos'><button> logos </button></NavLink>
+                    <NavLink to='/branding'><button> branding </button></NavLink>
                     <NavLink to='/educational'><button> educational </button></NavLink>
-                    <NavLink to='/book_jackets'><button> books </button></NavLink>
+                    <NavLink to='/print'><button> print </button></NavLink>
                     <NavLink to='/digital'><button> digital </button></NavLink>
                 </div>}
             </div>)

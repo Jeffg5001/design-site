@@ -1,1 +1,1 @@
-export default ["Edact_CDs1.jpg","adelphi1.jpg","adelphi2.jpg","adelphi3.jpg","edact-1.jpg","edact-2.jpg","edact-3.jpg","zap1.jpg"]
+export default ["AIche7.jpg","Edact_CDs1.jpg","adelphi1.jpg","adelphi2.jpg","adelphi3.jpg","edact-1.jpg","edact-2.jpg","edact-3.jpg","zap1.jpg"]

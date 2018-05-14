@@ -1,1 +1,1 @@
-export default ["directMail1.jpg","directMail10.jpg","directMail2.jpg","directMail3.jpg","directMail4.jpg","directMail5.jpg","directMail6.jpg","directMail7.jpg","directMail8.jpg","directMail9.jpg"]
+export default ["1OMSG-9.jpg","2ESC_AdPacket2017.jpg","3Strata_1.jpg","ESC_Pamphlets.jpg","conferencePro.jpg","directMail1.jpg","directMail10.jpg","directMail2.jpg","directMail3.jpg","directMail7.jpg","directMail8.jpg","directMail9.jpg","familyAids.jpg"]

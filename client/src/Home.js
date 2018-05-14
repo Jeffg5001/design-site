@@ -9,7 +9,7 @@ export const Home = (props) =>{
                 <div className = 'homeWrapper'>
                 <div className='home'>
                     {categories.map( ( category ) => {
-                    return <SingleCategory key={category.fileName} image={`images/categories/${category.fileName}`} name={category.fileName.split('.')[0]}  />
+                    return <SingleCategory key={category} image={`images/categories/${category}`} name={category.split('.')[0]}  />
                 })
                 }
                 </div>

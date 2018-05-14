@@ -1,15 +1,15 @@
-import ads from "./ads"
-import book_jackets from "./book_jackets"
+import flyers from "./flyers"
+import print from "./print"
 import digital from "./digital"
 import educational from "./educational"
-import logos from "./logos"
+import branding from "./branding"
 import mailers from "./mailers"
 
 export default {
-    flyers:ads,
-    book_jackets,
+    flyers,
+    print,
     digital,
     educational,
-    logos,
+    branding,
     mailers,
 }
