@@ -34,12 +34,13 @@ body {
 .bottomBar .MobileLinks{
   display:none;
 }
-.bottomBar span {
+.phoneNumber {
   color: white;
   font-size: 1.7em;
   align-self: center;
   padding: 0 40px 0 0;
   font-family: Arial, sans-serif;
+  margin: 1vh;
   /* flex: 0 0.5 fit-content; */
 }
 a {
@@ -558,9 +559,6 @@ div .react-responsive-modal-modal{
   #slogan{
     margin-bottom: 11vh;
     text-align: center;
-  }
-  .phoneNumber{
-   margin: 1vh 0;
   }
 
 

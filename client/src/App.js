@@ -162,7 +162,7 @@ class App extends Component {
             <div className="MobileLinks">
               <MobileLinks />
             </div>
-            <span className='phoneNumber'>5 1 6 • 5 2 4 • 2 5 9 2</span>
+            <a href='tel:5165242592' className='phoneNumber'>5 1 6 • 5 2 4 • 2 5 9 2</a>
         </div>
       </div>
     );
