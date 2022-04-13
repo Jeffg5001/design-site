@@ -137,7 +137,8 @@ export default class ContactForm extends React.Component {
             <input onChange={this.handleChange} style={{display: 'none'}} type='text' name='_gotcha'/>
             <button type='submit' >submit</button>
             <div>
-            <span className='fa fa-phone' /> (516) 524-2592
+            <span className='fa fa-phone' />
+            <a className='fa fa-phone' href='tel:5165242592' >(516) 524-2592</a>
             <span className='fa fa-envelope-o' /> 
             <a href="mailto:dslottdesign@yahoo.com" >dslottdesign@yahoo.com</a>         
             </div>
