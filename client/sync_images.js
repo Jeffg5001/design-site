@@ -30,7 +30,7 @@ folders.forEach(
             }
         }
         if(folderExists){
-            fs.writeFileSync(`src/${folder}/index.js`, result + JSON.stringify(fileNames))
+            fs.writeFileSync(`client/src/${folder}/index.js`, result + JSON.stringify(fileNames))
         }
     }
 }
